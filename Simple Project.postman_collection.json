@@ -1,0 +1,3385 @@
+{
+	"info": {
+		"_postman_id": "21da94e2-0103-4dda-942a-c7158922830d",
+		"name": "Simple Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19413034"
+	},
+	"item": [
+		{
+			"name": "Kanban",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/login",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"auths",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"greg@gmail.com\",\n    \"password\": \"Testing@123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/login",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "211"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d3-KdE8psLSGt06RnwMs1xkJhfsq/Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:15:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful login!\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyZWdAZ21haWwuY29tIiwiaWF0IjoxNjg2NTM2MTM3fQ.Pq7EiRW0b62Li85ufRFtn8y0Z-kd8YK8hWBxRtwGzas\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"auths",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User Exist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"greg@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"register"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"31-kui1JJ+p8NPiW0kDc/7np093KWQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:15:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"User already exist!\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "226"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e2-52qmEZlxgo+kt5Pd+3t3e2v00eg\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:16:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create new account\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyZWdvcml1c0BnbWFpbC5jb20iLCJpYXQiOjE2ODY1MzYxNzN9.ZVPgP21ZEv1zZ5_qXYZM0uWTPpUhx5S_YSxAk-18iPw\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Get All Category",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"categories",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "359"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"167-7P3oZKU4UM7mliIcJwLeZW07hrI\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:22:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful create new category!\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"title\": \"Backlog\",\n                \"position\": 1,\n                \"color\": \"#ffffff\",\n                \"createdAt\": \"2023-06-21T04:16:01.070Z\",\n                \"updatedAt\": \"2023-06-21T04:20:53.830Z\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Backlog Engineer\",\n                \"position\": 2,\n                \"color\": \"#ffffff\",\n                \"createdAt\": \"2023-06-21T04:21:27.875Z\",\n                \"updatedAt\": \"2023-06-21T04:21:27.875Z\"\n            }\n        ]\n    }\n}"
+								},
+								{
+									"name": "Not Authorize",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-Ax4ybKSzY3EOdQLLqSnCRlwMotM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:25:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"You are not authorized!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Backlog Engineer\",\n    \"color\": \"#ffffff\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"categories",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "51"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"33-IQf1QsnkwTHRnhJrqFj3hQIJGGE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:17:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Fill up all the field\"\n}"
+								},
+								{
+									"name": "Already Exist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Backlog Engineer\",\n    \"color\": \"#ffffff\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-kSIxd6/3eVvFEeNg6Mc3jURd75Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:22:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Category already exist!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"backlog engineer\",\n    \"color\": \"#ffffff\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "51"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"33-IQf1QsnkwTHRnhJrqFj3hQIJGGE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:17:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Fill up all the field\"\n}"
+								},
+								{
+									"name": "Already Exist",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"backlog engineer\",\n    \"color\": \"#ffffff\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-kSIxd6/3eVvFEeNg6Mc3jURd75Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:21:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Category already exist!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/categories/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-3ix9Z2vIhcPsya6QdGDN1QlF7Ws\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:24:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful delte category!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Subtask",
+					"item": [
+						{
+							"name": "Get Detail",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"subtasks",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "807"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"327-lWcovRZf5RaTFXduaT0u3FVS1j4\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 15:05:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success get detail subtask\",\n    \"data\": {\n        \"detail\": {\n            \"id\": 1,\n            \"description\": \"Kelainan deh itu kayaknya coba lu konsul ke dokter saraf\",\n            \"status\": false,\n            \"assignId\": 1,\n            \"taskId\": 1,\n            \"createdAt\": \"2023-06-26T14:58:50.112Z\",\n            \"updatedAt\": \"2023-06-26T14:59:11.824Z\",\n            \"comments\": [\n                {\n                    \"id\": 1,\n                    \"accountId\": 2,\n                    \"taskId\": 1,\n                    \"subtaskId\": 1,\n                    \"description\": \"Coba ke rumah sakit pertamax\",\n                    \"createdAt\": \"2023-06-26T15:00:36.426Z\",\n                    \"updatedAt\": \"2023-06-26T15:00:36.426Z\",\n                    \"account\": {\n                        \"id\": 2,\n                        \"email\": \"gregorius@gmail.com\",\n                        \"personal\": {\n                            \"name\": \"Gregorius Testing\"\n                        }\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"accountId\": 2,\n                    \"taskId\": 1,\n                    \"subtaskId\": 1,\n                    \"description\": \"Eh ke rumah sakit dexlite deng\",\n                    \"createdAt\": \"2023-06-26T15:00:49.657Z\",\n                    \"updatedAt\": \"2023-06-26T15:00:49.657Z\",\n                    \"account\": {\n                        \"id\": 2,\n                        \"email\": \"gregorius@gmail.com\",\n                        \"personal\": {\n                            \"name\": \"Gregorius Testing\"\n                        }\n                    }\n                }\n            ]\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Kelainan deh itu kayaknya coba lu konsul ke dokter saraf\",\n    \"taskId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"subtasks",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"Coba cek ke dokter ada kelainan gak tuh testisnya!\",\n    \"taskId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "51"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"33-wwKrZbpRpH1sSmWXUZZN+cY9GU8\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:27:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create subtask\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Status",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/status/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"subtasks",
+										"status",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/status/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												"status",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-wLNMXI7Viz7ORv83FPnWit6jcPc\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Jun 2023 02:07:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success update task status\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Assign",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/assign/2",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"subtasks",
+										"assign",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"accountId\": 2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/assign/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												"assign",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3a-H9qSWJR8fKM+qxZfvwarP8ILWCM\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:38:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success assign user to a task\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"accountId\": 4\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/assign/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												"assign",
+												"1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "45"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2d-6sxVj3ibrQDgBYLSEa4BwOAATyI\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:44:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"User not found!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/2",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"subtasks",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/subtasks/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"subtasks",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-+62449iY8VcaN/j6U/lLFXU+X7Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Jun 2023 10:38:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful delete subtask!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Task Comment",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Eh ke rumah sakit dexlite salah\",\n    \"taskId\": 1,\n    \"subId\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/comments/",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"comments",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Task",
+					"item": [
+						{
+							"name": "Get Based Category",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/category/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/category/2",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"category",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "343"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"157-ZY5mUEtjweFOOPlKpKZjwvCWToY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:11:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create task\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 4,\n                \"title\": \"Buat Acara Tahun Baru\",\n                \"accountId\": 1,\n                \"categoryId\": 2,\n                \"description\": \"Testis bau anaeh\",\n                \"createdAt\": \"2023-06-21T04:49:52.187Z\",\n                \"updatedAt\": \"2023-06-21T04:49:52.187Z\",\n                \"subtasks\": [],\n                \"owner\": {\n                    \"id\": 1,\n                    \"email\": \"gregorius@gmail.com\",\n                    \"personal\": {\n                        \"name\": \"Greg Testing\"\n                    }\n                }\n            }\n        ]\n    }\n}"
+								},
+								{
+									"name": "Success With Subtask",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/category/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"category",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "538"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"21a-vP8y8Mnu0oc6xMEkEB7caP0SUuE\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:27:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create task\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"title\": \"Buat Acara Tahun Baru\",\n                \"accountId\": 1,\n                \"categoryId\": 1,\n                \"description\": \"Testis bau anaeh\",\n                \"createdAt\": \"2023-06-26T14:23:55.436Z\",\n                \"updatedAt\": \"2023-06-26T14:23:55.436Z\",\n                \"subtasks\": [\n                    {\n                        \"id\": 1,\n                        \"description\": \"Coba cek ke dokter ada kelainan gak tuh testisnya!\",\n                        \"status\": false,\n                        \"assignId\": null,\n                        \"taskId\": 1,\n                        \"createdAt\": \"2023-06-26T14:27:21.951Z\",\n                        \"updatedAt\": \"2023-06-26T14:27:21.951Z\"\n                    }\n                ],\n                \"owner\": {\n                    \"id\": 1,\n                    \"email\": \"gregorius@gmail.com\",\n                    \"personal\": {\n                        \"name\": \"Greg Testing\"\n                    }\n                }\n            }\n        ]\n    }\n}"
+								},
+								{
+									"name": "Success with sub and the user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/category/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"category",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "627"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"273-VXamO4SFKyMHZJWbAIEiPhb/cqs\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 14:40:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create task\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"title\": \"Buat Acara Tahun Baru\",\n                \"accountId\": 1,\n                \"categoryId\": 1,\n                \"description\": \"Testis bau anaeh\",\n                \"createdAt\": \"2023-06-26T14:23:55.436Z\",\n                \"updatedAt\": \"2023-06-26T14:23:55.436Z\",\n                \"subtasks\": [\n                    {\n                        \"id\": 1,\n                        \"description\": \"Coba cek ke dokter ada kelainan gak tuh testisnya!\",\n                        \"status\": false,\n                        \"assignId\": 2,\n                        \"taskId\": 1,\n                        \"createdAt\": \"2023-06-26T14:27:21.951Z\",\n                        \"updatedAt\": \"2023-06-26T14:38:21.356Z\",\n                        \"assignTo\": {\n                            \"id\": 2,\n                            \"email\": \"greg@gmail.com\",\n                            \"personal\": {\n                                \"name\": \"Gregorius Eldwin Testing\"\n                            }\n                        }\n                    }\n                ],\n                \"owner\": {\n                    \"id\": 1,\n                    \"email\": \"gregorius@gmail.com\",\n                    \"personal\": {\n                        \"name\": \"Greg Testing\"\n                    }\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Detail",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "882"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"372-jOcMpEdQj24eOSU6NNnn0GUFtGw\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 26 Jun 2023 15:15:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success get detail task\",\n    \"data\": {\n        \"detail\": {\n            \"id\": 1,\n            \"title\": \"Buat Acara Tahun Baru\",\n            \"accountId\": 2,\n            \"categoryId\": 1,\n            \"description\": \"Testis bau anaeh\",\n            \"createdAt\": \"2023-06-26T14:58:40.760Z\",\n            \"updatedAt\": \"2023-06-26T14:58:40.760Z\",\n            \"comments\": [\n                {\n                    \"id\": 3,\n                    \"accountId\": 2,\n                    \"taskId\": 1,\n                    \"subtaskId\": null,\n                    \"description\": \"Eh ke rumah sakit dexlite deng\",\n                    \"createdAt\": \"2023-06-26T15:13:13.093Z\",\n                    \"updatedAt\": \"2023-06-26T15:13:13.093Z\",\n                    \"account\": {\n                        \"id\": 2,\n                        \"email\": \"gregorius@gmail.com\",\n                        \"personal\": {\n                            \"name\": \"Gregorius Testing\"\n                        }\n                    }\n                },\n                {\n                    \"id\": 4,\n                    \"accountId\": 2,\n                    \"taskId\": 1,\n                    \"subtaskId\": null,\n                    \"description\": \"Eh ke rumah sakit dexlite salah\",\n                    \"createdAt\": \"2023-06-26T15:13:20.534Z\",\n                    \"updatedAt\": \"2023-06-26T15:13:20.534Z\",\n                    \"account\": {\n                        \"id\": 2,\n                        \"email\": \"gregorius@gmail.com\",\n                        \"personal\": {\n                            \"name\": \"Gregorius Testing\"\n                        }\n                    }\n                }\n            ],\n            \"owner\": {\n                \"id\": 2,\n                \"email\": \"gregorius@gmail.com\",\n                \"personal\": {\n                    \"name\": \"Gregorius Testing\"\n                }\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Buat Acara Tahun Baru\",\n    \"description\": \"Testis bau anaeh\",\n    \"category\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Buat Acara Tahun Baru\",\n    \"description\": \"Testis bau anaeh\",\n    \"category\": 2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"30-UcDB5XTciDb113KNcfxU0jBxjDQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:49:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create task\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"Buat Acara Tahun Baru\",\n    \"description\": \"Testis bau anaeh\",\n    \"category\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-T4fwmh4PSU/K3aclp8ml9dHAceY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:50:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Use the correct category!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Category Task",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/update-category/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										"update-category",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"category\": 2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/update-category/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"update-category",
+												"1"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "57"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"39-uSXYu+t/JE6n+7m2MYCzep/tX2E\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Jun 2023 02:10:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success update task category\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												""
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "45"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2d-LOwlNvWbsPdBpWYqjoIdskpuXiA\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:49:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Data not found!\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-f0DI7FSDwL9quNq5D7XwVmrQcb8\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 21 Jun 2023 04:49:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful delete task!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Assign",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/assign/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"tasks",
+										"assign",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Succes",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"accountId\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/tasks/assign/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"tasks",
+												"assign",
+												"1"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-cV/ABIIg65DyeApZaX5fnfYZmDU\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 27 Jun 2023 10:57:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success assign user to the task\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"greg@gmail.com\",\n    \"password\": \"Testing@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/login",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"auths",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"greg@gmail.com\",\n    \"password\": \"Testing@123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/login",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "211"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d3-KdE8psLSGt06RnwMs1xkJhfsq/Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:15:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful login!\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyZWdAZ21haWwuY29tIiwiaWF0IjoxNjg2NTM2MTM3fQ.Pq7EiRW0b62Li85ufRFtn8y0Z-kd8YK8hWBxRtwGzas\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"auths",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User Exist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"greg@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"register"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"31-kui1JJ+p8NPiW0kDc/7np093KWQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:15:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"User already exist!\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"gregorius@gmail.com\",\n    \"password\": \"Testing@123\",\n    \"confirmPassword\": \"Testing@123\",\n    \"name\": \"Greg Testing\",\n    \"biodata\": \"Lorem ipsum testing 12321 sasadwad dwandkawdawdn dawn dawjdoawdiawhdaw dhawidhaiwhdaiwodaw dawhdioawhdfpoepadanwdaowdawh daowidhawohd\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/auths/register",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"auths",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "226"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e2-52qmEZlxgo+kt5Pd+3t3e2v00eg\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:16:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Success create new account\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyZWdvcml1c0BnbWFpbC5jb20iLCJpYXQiOjE2ODY1MzYxNzN9.ZVPgP21ZEv1zZ5_qXYZM0uWTPpUhx5S_YSxAk-18iPw\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Image",
+					"item": [
+						{
+							"name": "Get All Image",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images?category=&name=3",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": ""
+										},
+										{
+											"key": "name",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Query name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images?category=&name=3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": ""
+												},
+												{
+													"key": "name",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "471"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1d7-QdI3+YSjuDI0SwWVbO0pE8l6xz0\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:14:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful upload image!\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"name\": \"Testing 1 3\",\n                \"path\": \"public/images/da40594b-8127-4357-8573-3d3df564cb26-1686535012599.png\",\n                \"slug\": \"da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3\",\n                \"category\": \"nature\",\n                \"description\": \"Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa\",\n                \"accountId\": 1,\n                \"createdAt\": \"2023-06-11T17:37:37.854Z\",\n                \"updatedAt\": \"2023-06-12T01:57:31.456Z\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Category",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/category",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images",
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Query name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images?category=&name=3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": ""
+												},
+												{
+													"key": "name",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "471"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1d7-QdI3+YSjuDI0SwWVbO0pE8l6xz0\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:14:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful upload image!\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 1,\n                \"name\": \"Testing 1 3\",\n                \"path\": \"public/images/da40594b-8127-4357-8573-3d3df564cb26-1686535012599.png\",\n                \"slug\": \"da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3\",\n                \"category\": \"nature\",\n                \"description\": \"Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa\",\n                \"accountId\": 1,\n                \"createdAt\": \"2023-06-11T17:37:37.854Z\",\n                \"updatedAt\": \"2023-06-12T01:57:31.456Z\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Image Detail",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images",
+										"da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Image Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images",
+												"da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "471"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1d7-B8O3nMuepWsDJYA1IwmOjTSYGis\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:20:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful upload image!\",\n    \"data\": {\n        \"detail\": {\n            \"id\": 1,\n            \"name\": \"Testing 1 3\",\n            \"path\": \"public/images/da40594b-8127-4357-8573-3d3df564cb26-1686535012599.png\",\n            \"slug\": \"da40594b-8127-4357-8573-3d3df564cb26-1686535012599-Testing-1-3\",\n            \"category\": \"nature\",\n            \"description\": \"Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa\",\n            \"accountId\": 1,\n            \"createdAt\": \"2023-06-11T17:37:37.854Z\",\n            \"updatedAt\": \"2023-06-12T01:57:31.456Z\"\n        }\n    }\n}"
+								},
+								{
+									"name": "Doesn't exist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/da40594b-8127-dawdawfawaw-8573-3d3df564cb26-1686535012599-Testing-1-3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images",
+												"da40594b-8127-dawdawfawaw-8573-3d3df564cb26-1686535012599-Testing-1-3"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"30-POxSnCyQdf6Gp8q5bYWbdXi1iZ4\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:21:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": false,\n    \"message\": \"Data doesn't exist\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/Users/gregeld/Downloads/1685761392072.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "Testing 1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "nature",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "photo",
+													"type": "file",
+													"src": "/Users/gregeld/Downloads/1685761392072.jpeg"
+												},
+												{
+													"key": "title",
+													"value": "Testing 1",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa",
+													"type": "text"
+												},
+												{
+													"key": "category",
+													"value": "nature",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-MjCF3nrDu7X2+tt5SNlXT5YGtoI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 11 Jun 2023 17:41:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful upload image!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Image",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "title",
+											"value": "Testing 1 3",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "nature",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/1",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "photo",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "title",
+													"value": "Testing 1 3",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "Testedadwa awdawdawndkawidw dnawidiawd awdiawbdiawdioaw dbaiodawioda dawidbioawbdioawbdoiwa",
+													"type": "text"
+												},
+												{
+													"key": "category",
+													"value": "nature",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/1",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-K2jTgBUcl2oQ+tYBcIxMe/niSlM\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:57:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful update image!\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Image",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "access_token",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/3",
+									"host": [
+										"{{BASE_URL_DEVELOPMENT}}"
+									],
+									"path": [
+										"{{PrefixApi}}",
+										"images",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL_DEVELOPMENT}}/{{PrefixApi}}/images/3",
+											"host": [
+												"{{BASE_URL_DEVELOPMENT}}"
+											],
+											"path": [
+												"{{PrefixApi}}",
+												"images",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-C6qihhYgV2NLquDNXOVW7DiVeB4\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 02:03:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Successful delete image!\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
